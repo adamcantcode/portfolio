@@ -9,6 +9,10 @@ module.exports = {
       // 'serif': ['"Ubuntu Mono"', 'Georgia'],
       // 'mono': ['"Ubuntu Mono"', 'SFMono-Regular'],
     },
+    container : {
+      center: true,
+      padding: '1rem'
+    },
     extend: {},
   },
   plugins: [],
