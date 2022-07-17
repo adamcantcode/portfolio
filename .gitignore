@@ -20,3 +20,6 @@
 
 # THEMES
 /wp-content/themes/twentytwentytwo
+
+# adamcantcode files
+/wp-content/themes/adamcantcode/node_modules
