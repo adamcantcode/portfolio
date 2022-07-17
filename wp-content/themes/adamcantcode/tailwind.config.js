@@ -4,11 +4,11 @@ module.exports = {
     './*.php', 
     './src/**/*.js'],
   theme: {
-    // fontFamily: {
-    //   'sans': ['"Ubuntu Mono"', 'system-ui'],
-    //   'serif': ['"Ubuntu Mono"', 'Georgia'],
-    //   'mono': ['"Ubuntu Mono"', 'SFMono-Regular'],
-    // },
+    fontFamily: {
+      'sans': ['"Sora"', 'system-ui'],
+      // 'serif': ['"Ubuntu Mono"', 'Georgia'],
+      // 'mono': ['"Ubuntu Mono"', 'SFMono-Regular'],
+    },
     extend: {},
   },
   plugins: [],

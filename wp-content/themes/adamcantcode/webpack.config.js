@@ -4,7 +4,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 var path = require('path');
 
-const localDomain = 'https://portfolio.local/';
+const localDomain = 'http://portfolio.local/';
 
 const config = {
   name: 'theme-config',
@@ -53,7 +53,7 @@ module.exports = (env, argv) => {
       new BrowserSyncPlugin({
         files: ['./**/*.php', './**/*.css', './**/*.js'],
         proxy: localDomain,
-        browser: 'brave browser',
+        browser: 'brave',
       }),
     ];
   }

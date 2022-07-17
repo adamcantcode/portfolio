@@ -38,13 +38,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adamcantcode/adamcantcode.git"
+    "url": "git+https://github.com/adamcantcode/portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adamcantcode/adamcantcode/issues"
+    "url": "https://github.com/adamcantcode/portfolio/issues"
   },
-  "homepage": "https://github.com/adamcantcode/adamcantcode#readme"
+  "homepage": "https://github.com/adamcantcode/portfolio#readme"
 }

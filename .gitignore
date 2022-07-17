@@ -23,3 +23,5 @@
 
 # adamcantcode files
 /wp-content/themes/adamcantcode/node_modules
+/wp-content/themes/adamcantcode/dist/css/app.css.map
+/wp-content/themes/adamcantcode/dist/js/app.js.map
