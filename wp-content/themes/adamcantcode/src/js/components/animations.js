@@ -1,6 +1,52 @@
 function HeadingAnimation() {
   this.animateHeading = () => {
-    console.log('test');
+    // const heroAnimation = gsap.timeline();
+
+    // heroAnimation.from('.name-card', {
+    //   transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
+    //   y: '50px',
+    //   opacity: 0,
+    //   stagger: 0.2,
+    //   duration: .5,
+    //   delay: 1,
+    //   ease: "power1.inOut"
+    //   // markers: true
+    // })
+
+    function scene1() {
+      const nameAnimation = gsap.timeline();
+      nameAnimation.from('.name-card', {
+        transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
+        y: '50px',
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        delay: 0.5,
+        ease: 'power1.inOut',
+        // markers: true
+      });
+      return nameAnimation;
+    }
+
+    function scene2() {
+      const infoPanel = gsap.timeline();
+      infoPanel.from('.info-text', {
+        transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
+        y: '25px',
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        delay: 0.5,
+        ease: 'power1.inOut',
+        // markers: true
+      });
+      return infoPanel;
+    }
+
+    const master = gsap.timeline()
+    .add(scene1())
+    .add(scene2());
+
     // gsap.registerPlugin(ScrollTrigger);
     // gsap.to('h1', {
     //   scrollTrigger: {
