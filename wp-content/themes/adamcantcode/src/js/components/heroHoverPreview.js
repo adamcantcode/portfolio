@@ -21,7 +21,7 @@ function HeroHoverPreview() {
     const body = document.querySelector('body');
     const resume = document.querySelector('.resume > a');
     elements.forEach((element) => {
-      if (!element.classList.contains('text-whtie')) {
+      if (!element.classList.contains('text-white')) {
         element.classList.add('text-white');
       }
     });

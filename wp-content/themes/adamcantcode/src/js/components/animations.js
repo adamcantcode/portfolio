@@ -58,17 +58,9 @@ function HeroAnimation() {
   };
   this.textSlide = () => {
     console.log('test');
-    gsap.to('.font-stroke.first', {
+    gsap.to('.font-outline.font-stroke', {
       xPercent: 100,
-      duration: 60,
-      repeat: -1,
-      // repeatDelay: 5,
-      // stagger: 1,
-      ease: 'linear',
-    });
-    gsap.to('.font-stroke.second', {
-      xPercent: 100,
-      duration: 60,
+      duration: 120,
       repeat: -1,
       // repeatDelay: 5,
       // stagger: 1,
