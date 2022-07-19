@@ -635,6 +635,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgba(38, 38, 38, var(--tw-border-opacity));
 }
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+}
 .bg-sky-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(14, 165, 233, var(--tw-bg-opacity));
@@ -728,6 +732,9 @@ video {
 }
 .duration-500 {
   transition-duration: 500ms;
+}
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 .test {
   color: red; 
