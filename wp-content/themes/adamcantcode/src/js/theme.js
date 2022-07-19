@@ -13,5 +13,6 @@ import * as heroHoverPreview from './components/heroHoverPreview';
 document.addEventListener('DOMContentLoaded', () => {
   animations.headingAnimation.animateHeading();
   animations.headingAnimation.animateCursor();
+  animations.headingAnimation.textSlide();
   heroHoverPreview.heroHoverPreview.infoHover();
 });

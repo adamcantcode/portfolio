@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "headingAnimation": () => (/* binding */ headingAnimation)
 /* harmony export */ });
-function HeadingAnimation() {
+function HeroAnimation() {
   this.animateHeading = () => {
     // const heroAnimation = gsap.timeline();
 
@@ -55,7 +55,6 @@ function HeadingAnimation() {
     }
 
     function info() {
-      console.log('running');
       const infoPanel = gsap.timeline();
       infoPanel.from('.info-item', {
         transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
@@ -71,21 +70,6 @@ function HeadingAnimation() {
     }
 
     const master = gsap.timeline().add(name()).add(info());
-
-    // gsap.registerPlugin(ScrollTrigger);
-    // gsap.to('h1', {
-    //   scrollTrigger: {
-    //     trigger: 'h1', // selector or element
-    //     start: 'center top', // [trigger] [scroller] positions
-    //     end: '+=50', // [trigger] [scroller] positions
-    //     scrub: true,
-    //   },
-    //   x: 500,
-    //   duration: 1,
-    //   ease: 'power2.inOut',
-    //   // repeat: -1,
-    //   // yoyo: true,
-    // });
   };
   this.animateCursor = () => {
     window.addEventListener('mousemove', (e) => {
@@ -98,9 +82,28 @@ function HeadingAnimation() {
       });
     });
   };
+  this.textSlide = () => {
+    console.log('test');
+    gsap.to('.font-stroke.first', {
+      xPercent: 100,
+      duration: 10,
+      repeat: -1,
+      // repeatDelay: 5,
+      // stagger: 1,
+      ease: 'linear',
+    });
+    gsap.to('.font-stroke.second', {
+      xPercent: 100,
+      duration: 10,
+      repeat: -1,
+      // repeatDelay: 5,
+      // stagger: 1,
+      ease: 'linear',
+    });
+  };
 }
 
-const headingAnimation = new HeadingAnimation();
+const headingAnimation = new HeroAnimation();
 
 
 
@@ -251,6 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateHeading();
   _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateCursor();
+  _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.textSlide();
   _components_heroHoverPreview__WEBPACK_IMPORTED_MODULE_2__.heroHoverPreview.infoHover();
 });
 })();
