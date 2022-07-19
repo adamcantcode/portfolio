@@ -86,7 +86,7 @@ function HeroAnimation() {
     console.log('test');
     gsap.to('.font-stroke.first', {
       xPercent: 100,
-      duration: 10,
+      duration: 60,
       repeat: -1,
       // repeatDelay: 5,
       // stagger: 1,
@@ -94,7 +94,7 @@ function HeroAnimation() {
     });
     gsap.to('.font-stroke.second', {
       xPercent: 100,
-      duration: 10,
+      duration: 60,
       repeat: -1,
       // repeatDelay: 5,
       // stagger: 1,

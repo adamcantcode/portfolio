@@ -3,19 +3,23 @@
 <?php get_header(); ?>
 <div class="!cursor-none transition-all">
   <div class="cursor absolute h-4 w-4 bg-sky-500 rounded-full pointer-events-none z-50 -left-4 opacity-75"></div>
-  <!-- <div class="absolute -rotate-[30deg] -left-[2000px] outline-font"> -->
-  <div class="absolute outline-font">
+  <div class="absolute -rotate-[30deg] outline-font">
     <div class="flex">
-      <h3 class="first -translate-x-full font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me99</h3>
-      <h3 class="second -translate-x-full font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me99</h3>
+      <h3 class="first -translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me</h3>
+      <h3 class="second -translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me</h3>
     </div>
-    <!-- <h3 class="second font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">i mean can't you just do it for me i mean can't you just do it for me</h3> -->
-    <!-- <h3 class="first font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">nobody’s clicking the button... nobody’s clicking the button...</h3>
-    <h3 class="second -translate-x-full font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">nobody’s clicking the button... nobody’s clicking the button...</h3>
-    <h3 class="first font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol</h3>
-    <h3 class="second -translate-x-full font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol</h3>
-    <h3 class="first font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow</h3>
-    <h3 class="second -translate-x-full font-outline font-stroke text-base whitespace-nowrap leading-tight inline-block">apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow</h3> -->
+    <div class="flex">
+      <h3 class="first font-outline -translate-x-full font-stroke text-8xl whitespace-nowrap leading-tight inline-block">nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... </h3>
+      <h3 class="second -translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... nobody’s clicking the button... </h3>
+    </div>
+    <div class="flex">
+      <h3 class="first font-outline -translate-x-full font-stroke text-8xl whitespace-nowrap leading-tight inline-block">litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol</h3>
+      <h3 class="second -translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol litterally nothing has been tracked since launch lol itterally nothing has been tracked since launch lol</h3>
+    </div>
+    <div class="flex">
+      <h3 class="first font-outline -translate-x-full font-stroke text-8xl whitespace-nowrap leading-tight inline-block">apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow</h3>
+      <h3 class="second -translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow</h3>
+    </div>
   </div>
 
   <nav class="fixed left-1/2 top-10 -translate-x-1/2 z-10">
