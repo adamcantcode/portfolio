@@ -7,7 +7,7 @@ module.exports = {
     fontFamily: {
       'sans': ['"Sora"', 'system-ui'],
       // 'serif': ['"Ubuntu Mono"', 'Georgia'],
-      // 'mono': ['"Ubuntu Mono"', 'SFMono-Regular'],
+      'outline': ['"Fredoka One"', 'SFMono-Regular'],
     },
     container : {
       center: true,

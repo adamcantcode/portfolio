@@ -39,7 +39,7 @@ function HeadingAnimation() {
     //   // markers: true
     // })
 
-    function scene1() {
+    function name() {
       const nameAnimation = gsap.timeline();
       nameAnimation.from('.name-card', {
         transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
@@ -54,9 +54,10 @@ function HeadingAnimation() {
       return nameAnimation;
     }
 
-    function scene2() {
+    function info() {
+      console.log('running');
       const infoPanel = gsap.timeline();
-      infoPanel.from('.info-text', {
+      infoPanel.from('.info-item', {
         transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
         y: '25px',
         opacity: 0,
@@ -69,9 +70,7 @@ function HeadingAnimation() {
       return infoPanel;
     }
 
-    const master = gsap.timeline()
-    .add(scene1())
-    .add(scene2());
+    const master = gsap.timeline().add(name()).add(info());
 
     // gsap.registerPlugin(ScrollTrigger);
     // gsap.to('h1', {
@@ -88,9 +87,64 @@ function HeadingAnimation() {
     //   // yoyo: true,
     // });
   };
+  this.animateCursor = () => {
+    window.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      gsap.to('.cursor', {
+        x: x,
+        y: y,
+        ease: 'power4.out',
+      });
+    });
+  };
 }
 
 const headingAnimation = new HeadingAnimation();
+
+
+
+
+/***/ }),
+
+/***/ "./src/js/components/heroHoverPreview.js":
+/*!***********************************************!*\
+  !*** ./src/js/components/heroHoverPreview.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "heroHoverPreview": () => (/* binding */ heroHoverPreview)
+/* harmony export */ });
+function HeroHoverPreview() {
+  this.infoHover = () => {
+    var infoItem = document.querySelectorAll('.info-item');
+    console.log(infoItem);
+    infoItem.forEach((item) => {
+      item.addEventListener('mouseover', (e) => {
+        console.log(e.target.innerText);
+        if (e.target.innerText === 'consult') {
+          this.darkMode();
+        }
+      });
+    });
+  };
+  this.darkMode = () => {
+    const elements = document.querySelectorAll(
+      '.pages > a, .resume > a, #name, #identity, .info-item'
+    );
+    const html = document.querySelector('html');
+    elements.forEach((element) => {
+      if (!element.classList.contains('text-whtie')) {
+        element.classList.add('text-white');
+      }
+    });
+    html.classList.add('bg-black');
+  };
+}
+
+const heroHoverPreview = new HeroHoverPreview();
 
 
 
@@ -162,6 +216,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/main.css */ "./src/css/main.css");
 /* harmony import */ var _components_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/animations */ "./src/js/components/animations.js");
+/* harmony import */ var _components_heroHoverPreview__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/heroHoverPreview */ "./src/js/components/heroHoverPreview.js");
 /**
  * Import tailwind styles
  */
@@ -171,8 +226,11 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
   _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateHeading();
+  _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateCursor();
+  _components_heroHoverPreview__WEBPACK_IMPORTED_MODULE_2__.heroHoverPreview.infoHover();
 });
 })();
 

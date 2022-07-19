@@ -13,7 +13,7 @@ function HeadingAnimation() {
     //   // markers: true
     // })
 
-    function scene1() {
+    function name() {
       const nameAnimation = gsap.timeline();
       nameAnimation.from('.name-card', {
         transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
@@ -28,9 +28,10 @@ function HeadingAnimation() {
       return nameAnimation;
     }
 
-    function scene2() {
+    function info() {
+      console.log('running');
       const infoPanel = gsap.timeline();
-      infoPanel.from('.info-text', {
+      infoPanel.from('.info-item', {
         transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
         y: '25px',
         opacity: 0,
@@ -43,9 +44,7 @@ function HeadingAnimation() {
       return infoPanel;
     }
 
-    const master = gsap.timeline()
-    .add(scene1())
-    .add(scene2());
+    const master = gsap.timeline().add(name()).add(info());
 
     // gsap.registerPlugin(ScrollTrigger);
     // gsap.to('h1', {
@@ -61,6 +60,17 @@ function HeadingAnimation() {
     //   // repeat: -1,
     //   // yoyo: true,
     // });
+  };
+  this.animateCursor = () => {
+    window.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      gsap.to('.cursor', {
+        x: x,
+        y: y,
+        ease: 'power4.out',
+      });
+    });
   };
 }
 
