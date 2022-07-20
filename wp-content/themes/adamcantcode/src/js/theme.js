@@ -13,7 +13,8 @@ import * as loadIn from './components/loadIn';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadIn.loadIn.generateItems();
-  // loadIn.loadIn.scrollItems();
+  loadIn.loadIn.moveItems();
+  loadIn.loadIn.scrollItems();
   // animations.headingAnimation.animateHeading();
   // animations.headingAnimation.animateCursor();
   // // animations.headingAnimation.textSlide();

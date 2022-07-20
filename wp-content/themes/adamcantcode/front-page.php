@@ -2,10 +2,10 @@
 
 <?php get_header(); ?>
 
-<div id="loadIn" class="absolute right-[20%] top-[20%]">
-  <div class="box h-24 w-24 border-4 border-black absolute shadow-[0px_8px_6px_0_rgba(0,0,0,0.3)]"></div>
+<div id="loadIn" class="absolute right-[20%] top-[20%] h-[100vh]">
+  <div class="box h-60 w-60 border-4 border-black absolute"></div>
 </div>
 
-<div class="h-[200vh]"></div>
+<div class="h-[500vh]"></div>
 
 <?php get_footer(); ?>
