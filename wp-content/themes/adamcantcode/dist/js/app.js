@@ -164,6 +164,66 @@ const heroHoverPreview = new HeroHoverPreview();
 
 
 
+/***/ }),
+
+/***/ "./src/js/components/loadIn.js":
+/*!*************************************!*\
+  !*** ./src/js/components/loadIn.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadIn": () => (/* binding */ loadIn)
+/* harmony export */ });
+function LoadIn() {
+  this.generateItems = () => {
+    console.log('generate');
+    const container = document.querySelector('#loadIn');
+    const initialElement = document.querySelector('#loadIn .box');
+    for (let i = 2; i < 37; i++) {
+      const clone = initialElement.cloneNode(true);
+      container.append(clone);
+      let rotate = i * 5;
+      let heightWidth = i * 10;
+      let scale = i * 0.15;
+      // rotate = rotate.toString() + 'px';
+
+      gsap.set('.box:nth-child(' + i + ')', {
+        // scale: i,
+        height: heightWidth,
+        width: heightWidth,
+        rotate: rotate,
+        scale: scale,
+      });
+    }
+  };
+  this.scrollItems = () => {
+    console.log('test');
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('.box', {
+      stagger: 1,
+      rotate: '180deg',
+      duration: 3,
+      scrollTrigger: {
+        trigger: 'body',
+        start: 'top top',
+        end: 'bottom end',
+        scrub: 1.5,
+        markers: true,
+        pin: true,
+        anticipatePin: 1,
+        // invalidateOnRefresh: true,
+      },
+    });
+  };
+}
+
+const loadIn = new LoadIn();
+
+
+
+
 /***/ })
 
 /******/ 	});
@@ -232,6 +292,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/main.css */ "./src/css/main.css");
 /* harmony import */ var _components_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/animations */ "./src/js/components/animations.js");
 /* harmony import */ var _components_heroHoverPreview__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/heroHoverPreview */ "./src/js/components/heroHoverPreview.js");
+/* harmony import */ var _components_loadIn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/loadIn */ "./src/js/components/loadIn.js");
 /**
  * Import tailwind styles
  */
@@ -242,12 +303,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateHeading();
-  _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateCursor(); // animations.headingAnimation.textSlide();
 
-  _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.fadeOutOnScorll();
-  _components_heroHoverPreview__WEBPACK_IMPORTED_MODULE_2__.heroHoverPreview.infoHover();
+document.addEventListener('DOMContentLoaded', function () {
+  _components_loadIn__WEBPACK_IMPORTED_MODULE_3__.loadIn.generateItems(); // loadIn.loadIn.scrollItems();
+  // animations.headingAnimation.animateHeading();
+  // animations.headingAnimation.animateCursor();
+  // // animations.headingAnimation.textSlide();
+  // animations.headingAnimation.fadeOutOnScorll();
+  // heroHoverPreview.heroHoverPreview.infoHover();
 });
 })();
 

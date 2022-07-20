@@ -9,11 +9,14 @@ import '../css/main.css';
 
 import * as animations from './components/animations';
 import * as heroHoverPreview from './components/heroHoverPreview';
+import * as loadIn from './components/loadIn';
 
 document.addEventListener('DOMContentLoaded', () => {
-  animations.headingAnimation.animateHeading();
-  animations.headingAnimation.animateCursor();
-  // animations.headingAnimation.textSlide();
-  animations.headingAnimation.fadeOutOnScorll();
-  heroHoverPreview.heroHoverPreview.infoHover();
+  loadIn.loadIn.generateItems();
+  // loadIn.loadIn.scrollItems();
+  // animations.headingAnimation.animateHeading();
+  // animations.headingAnimation.animateCursor();
+  // // animations.headingAnimation.textSlide();
+  // animations.headingAnimation.fadeOutOnScorll();
+  // heroHoverPreview.heroHoverPreview.infoHover();
 });
