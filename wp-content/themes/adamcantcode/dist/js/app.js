@@ -184,19 +184,22 @@ function LoadIn() {
     for (let i = 2; i < 37; i++) {
       const clone = initialElement.cloneNode(true);
       container.append(clone);
-      let rotate = i * 5;
-      let heightWidth = i * 10;
-      let scale = i * 0.15;
-      // rotate = rotate.toString() + 'px';
+      let heightWidth = i * 20;
+      let scale = (i * .5);
 
       gsap.set('.box:nth-child(' + i + ')', {
         // scale: i,
         height: heightWidth,
         width: heightWidth,
-        rotate: rotate,
         scale: scale,
+        // right: '-50%',
+        // top: '-50%',
+        xPercent: -50,
+        yPercent: -50,
+        rotate: '30deg',
       });
     }
+    initialElement.classList.add('hidden');
   };
   this.scrollItems = () => {
     console.log('test');
