@@ -2,8 +2,10 @@
 
 <?php get_header(); ?>
 <div class="!cursor-none transition-all">
+  <!-- CURSOR -->
   <div class="cursor absolute h-4 w-4 bg-sky-500 rounded-full pointer-events-none z-50 -left-4 opacity-75"></div>
-  <div class="absolute -rotate-[30deg] origin-left outline-font">
+  <!-- TEXT SLIDE -->
+  <!-- <div class="absolute -rotate-[30deg] origin-left outline-font">
     <div class="flex">
       <h3 class="-translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me</h3>
       <h3 class="-translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me i mean can't you just do it for me</h3>
@@ -20,7 +22,7 @@
       <h3 class="font-outline -translate-x-full font-stroke text-8xl whitespace-nowrap leading-tight inline-block">apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow</h3>
       <h3 class="-translate-x-full font-outline font-stroke text-8xl whitespace-nowrap leading-tight inline-block">apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow apparently we have like ten servers and all of them go really slow</h3>
     </div>
-  </div>
+  </div> -->
 
   <nav class="fixed left-1/2 top-10 -translate-x-1/2 z-10">
     <div class="bg-[rgba(255,255,255,0.25)] p-6 backdrop-blur-lg rounded-full shadow-[0_4px_40px_rgba(0,0,0,0.25)] flex">
@@ -37,7 +39,7 @@
       </div>
     </div>
   </nav>
-
+  <!-- HEADING / INFO -->
   <div class="container h-screen flex flex-col justify-between">
     <div class="mt-48">
       <h1 id="name" class="name-card font-sans font-extrabold text-8xl  transition-colors duration-1000">adam<br>macaulay</h1>
@@ -50,8 +52,8 @@
         <p class="info-item transition-colors duration-1000">design</p>
         <p class="info-item transition-colors duration-1000">develop</p>
         <p class="info-item transition-colors duration-1000">optimize</p>
-        <p class="info-item transition-colors duration-1000">consult</p>
         <p class="info-item transition-colors duration-1000">maintain</p>
+        <p class="info-item transition-colors duration-1000">consult</p>
         <p class="info-item transition-colors duration-1000">secure</p>
       </div>
       <div class="text-xl text-sky-500 font-semibold leading-8 self-end">

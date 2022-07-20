@@ -13,6 +13,7 @@ import * as heroHoverPreview from './components/heroHoverPreview';
 document.addEventListener('DOMContentLoaded', () => {
   animations.headingAnimation.animateHeading();
   animations.headingAnimation.animateCursor();
-  animations.headingAnimation.textSlide();
+  // animations.headingAnimation.textSlide();
+  animations.headingAnimation.fadeOutOnScorll();
   heroHoverPreview.heroHoverPreview.infoHover();
 });
