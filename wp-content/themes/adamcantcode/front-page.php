@@ -35,32 +35,34 @@
 
       </div>
       <div class="resume">
-        <a href="#" class="font-bold text-base text-neutral-800 py-2 px-6 border-2 border-neutral-800 rounded-full mx-6 transition-colors duration-1000">about</a>
+        <a href="#" class="font-bold text-base text-neutral-800 py-2 px-6 border-2 border-neutral-800 rounded-full mx-6 transition-colors duration-1000">resume</a>
       </div>
     </div>
   </nav>
   <!-- HEADING / INFO -->
-  <div class="container h-screen flex flex-col justify-between">
-    <div class="mt-48">
-      <h1 id="name" class="name-card font-sans font-extrabold text-8xl  transition-colors duration-1000">adam<br>macaulay</h1>
-      <h4 id="identity" class="name-card text-red text-xl font-extrabold mt-4  transition-colors duration-1000">designer / developer</h4>
-    </div>
-    <div class="mb-10 flex justify-between">
-      <div class="text-xl font-semibold leading-8">
-        <p class="info-item mb-4 transition-colors duration-1000">hi there 👋</p>
-        <p class="info-item mb-4 transition-colors duration-1000">i’m adam—i create for the web</p>
-        <p class="info-item transition-colors duration-1000">design</p>
-        <p class="info-item transition-colors duration-1000">develop</p>
-        <p class="info-item transition-colors duration-1000">optimize</p>
-        <p class="info-item transition-colors duration-1000">maintain</p>
-        <p class="info-item transition-colors duration-1000">consult</p>
-        <p class="info-item transition-colors duration-1000">secure</p>
+  <section id="hero">
+    <div class="container h-screen flex flex-col justify-between">
+      <div class="mt-48">
+        <h1 id="name" class="name-card font-sans font-extrabold text-8xl  transition-colors duration-1000">adam<br>macaulay</h1>
+        <h4 id="identity" class="name-card text-red text-xl font-extrabold mt-4  transition-colors duration-1000">designer / developer</h4>
       </div>
-      <div class="text-xl text-sky-500 font-semibold leading-8 self-end">
-        <p class="mb-4 "><a href="#">thoughts</a></p>
+      <div class="mb-10 flex justify-between">
+        <div class="text-xl font-semibold leading-8">
+          <p class="info-item mb-4 transition-colors duration-1000">hi there 👋</p>
+          <p class="info-item mb-4 transition-colors duration-1000">i’m adam—i create for the web</p>
+          <p class="info-item transition-colors duration-1000">design</p>
+          <p class="info-item transition-colors duration-1000">develop</p>
+          <p class="info-item transition-colors duration-1000">optimize</p>
+          <p class="info-item transition-colors duration-1000">maintain</p>
+          <p class="info-item transition-colors duration-1000">consult</p>
+          <p class="info-item transition-colors duration-1000">secure</p>
+        </div>
+        <div class="text-xl text-sky-500 font-semibold leading-8 self-end">
+          <p class="mb-4 "><a href="#">words</a></p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
 
   <div class="h-[300vh]"></div>

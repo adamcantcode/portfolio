@@ -78,16 +78,19 @@ function HeroAnimation() {
   };
   this.fadeOutOnScorll = () => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.name-card, .info-panel', {
+    gsap.to('.name-card, .info-item', {
       opacity: 0,
-      stagger: 2,
-      duration: 5,
+      stagger: 5,
+      duration: 10,
       scrollTrigger: {
-        trigger: '#name',
-        start: 'top top',
-        end: 'bottom top',
+        trigger: '#hero',
+        start: '1px top',
+        end: '100% top',
+        pin: true,
+        anticipatePin: 1,
+        pinSpacing: false,
+        markers: true,
         scrub: true, // or time (in seconds) to catch up
-        // markers: true,
         invalidateOnRefresh: true,
       },
     });
