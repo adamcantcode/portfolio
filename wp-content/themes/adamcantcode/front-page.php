@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 <div class="!cursor-none transition-all">
   <!-- CURSOR -->
-  <div class="cursor absolute h-4 w-4 bg-sky-500 rounded-full pointer-events-none z-50 -left-4 opacity-75"></div>
+  <div class="cursor fixed h-4 w-4 bg-sky-500 rounded-full pointer-events-none z-50 -left-4 opacity-75"></div>
   <!-- TEXT SLIDE -->
   <!-- <div class="absolute -rotate-[30deg] origin-left outline-font">
     <div class="flex">

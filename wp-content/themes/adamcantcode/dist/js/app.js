@@ -38,6 +38,7 @@ function HeroAnimation() {
       duration: 0.5,
       delay: 1,
       ease: 'power1.inOut',
+      repeatRefresh: true,
       // markers: true
     });
     return nameAnimation;
@@ -52,15 +53,17 @@ function HeroAnimation() {
       duration: 0.5,
       delay: 0.5,
       ease: 'power1.inOut',
+      repeatRefresh: true,
       // markers: true
     });
     return infoPanel;
   };
   this.animateCursor = () => {
     window.addEventListener('mousemove', (e) => {
+      console.log(e);
       gsap.to('.cursor', {
-        x: e.pageX,
-        y: e.pageY,
+        x: e.x + 8,
+        y: e.y - 8,
         ease: 'power4.out',
       });
     });
@@ -82,6 +85,7 @@ function HeroAnimation() {
       opacity: 0,
       stagger: 5,
       duration: 10,
+      repeatRefresh: true,
       scrollTrigger: {
         trigger: '#hero',
         start: '1px top',
