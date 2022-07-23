@@ -46,7 +46,7 @@ function HeroAnimation() {
   this.info = () => {
     const infoPanel = gsap.timeline();
     infoPanel.from('.info-item', {
-      transform: 'matrix(1, .05, 0.1, 1, 0, 0)',
+      transform: 'matrix(1, .05, 0.2, 1, 0, 0)',
       y: '25px',
       opacity: 0,
       stagger: 0.2,
@@ -60,7 +60,6 @@ function HeroAnimation() {
   };
   this.animateCursor = () => {
     window.addEventListener('mousemove', (e) => {
-      console.log(e);
       gsap.to('.cursor', {
         x: e.x + 8,
         y: e.y - 8,
@@ -68,37 +67,36 @@ function HeroAnimation() {
       });
     });
   };
-  this.textSlide = () => {
-    console.log('test');
-    gsap.to('.font-outline.font-stroke', {
-      xPercent: 100,
-      duration: 120,
-      repeat: -1,
-      // repeatDelay: 5,
-      // stagger: 1,
-      ease: 'linear',
-    });
-  };
-  this.fadeOutOnScorll = () => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.name-card, .info-item', {
-      opacity: 0,
-      stagger: 5,
-      duration: 10,
-      repeatRefresh: true,
-      scrollTrigger: {
-        trigger: '#hero',
-        start: '1px top',
-        end: '100% top',
-        pin: true,
-        anticipatePin: 1,
-        pinSpacing: false,
-        markers: true,
-        scrub: true, // or time (in seconds) to catch up
-        invalidateOnRefresh: true,
-      },
-    });
-  };
+  // this.textSlide = () => {
+  //   gsap.to('.font-outline.font-stroke', {
+  //     xPercent: 100,
+  //     duration: 120,
+  //     repeat: -1,
+  //     // repeatDelay: 5,
+  //     // stagger: 1,
+  //     ease: 'linear',
+  //   });
+  // };
+  // this.fadeOutOnScorll = () => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   gsap.to('.name-card, .info-item', {
+  //     opacity: 0,
+  //     stagger: .1,
+  //     duration: .3,
+  //     repeatRefresh: true,
+  //     scrollTrigger: {
+  //       trigger: '#hero',
+  //       start: '1px top',
+  //       end: '100% top',
+  //       // pin: true,
+  //       anticipatePin: 1,
+  //       pinSpacing: false,
+  //       markers: true,
+  //       // scrub: true, // or time (in seconds) to catch up
+  //       invalidateOnRefresh: true,
+  //     },
+  //   });
+  // };
 }
 
 const headingAnimation = new HeroAnimation();
@@ -121,16 +119,31 @@ __webpack_require__.r(__webpack_exports__);
 function HeroHoverPreview() {
   this.infoHover = () => {
     var infoItem = document.querySelectorAll('.info-item');
+    const cursor = document.querySelector('.cursor');
+
     infoItem.forEach((item) => {
       item.addEventListener('mouseover', (e) => {
-        if (e.target.innerText === 'consult') {
-          this.darkMode();
-        }
+        // if (e.target.innerText === 'consult') {
+        this.darkMode();
+        console.log(e);
+        gsap.to('.cursor', {
+          width: e.target.offsetWidth * 1.25 ,
+          height: e.target.offsetHeight,
+          left: -e.target.offsetWidth / 2,
+          ease: 'power4.out',
+        });
+        // }
       });
       item.addEventListener('mouseout', (e) => {
-        if (e.target.innerText === 'consult') {
-          this.lightMode();
-        }
+        // if (e.target.innerText === 'consult') {
+        this.lightMode();
+        gsap.to('.cursor', {
+          width: 16,
+          height: 16,
+          left: -16,
+          ease: 'power4.out',
+        });
+        // }
       });
     });
   };
@@ -252,8 +265,8 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateHeading();
   _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.animateCursor(); // animations.headingAnimation.textSlide();
+  // animations.headingAnimation.fadeOutOnScorll();
 
-  _components_animations__WEBPACK_IMPORTED_MODULE_1__.headingAnimation.fadeOutOnScorll();
   _components_heroHoverPreview__WEBPACK_IMPORTED_MODULE_2__.heroHoverPreview.infoHover();
 });
 })();

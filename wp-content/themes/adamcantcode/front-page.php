@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 <div class="!cursor-none transition-all">
   <!-- CURSOR -->
-  <div class="cursor fixed h-4 w-4 bg-sky-500 rounded-full pointer-events-none z-50 -left-4 opacity-75"></div>
+  <div class="cursor fixed h-4 w-4 bg-sky-500 rounded-full pointer-events-none z-50 -left-4 mix-blend-difference"></div>
   <!-- TEXT SLIDE -->
   <!-- <div class="absolute -rotate-[30deg] origin-left outline-font">
     <div class="flex">
@@ -47,15 +47,15 @@
         <h4 id="identity" class="name-card text-red text-xl font-extrabold mt-4  transition-colors duration-1000">designer / developer</h4>
       </div>
       <div class="mb-10 flex justify-between">
-        <div class="text-xl font-semibold leading-8">
+        <div class="text-xl font-semibold leading-8 flex items-start flex-col">
           <p class="info-item mb-4 transition-colors duration-1000">hi there 👋</p>
           <p class="info-item mb-4 transition-colors duration-1000">i’m adam—i create for the web</p>
-          <p class="info-item transition-colors duration-1000">design</p>
-          <p class="info-item transition-colors duration-1000">develop</p>
-          <p class="info-item transition-colors duration-1000">optimize</p>
-          <p class="info-item transition-colors duration-1000">maintain</p>
-          <p class="info-item transition-colors duration-1000">consult</p>
-          <p class="info-item transition-colors duration-1000">secure</p>
+          <p class="info-item inline transition-colors duration-1000">design</p>
+          <p class="info-item inline transition-colors duration-1000">develop</p>
+          <p class="info-item inline transition-colors duration-1000">optimize</p>
+          <p class="info-item inline transition-colors duration-1000">maintain</p>
+          <p class="info-item inline transition-colors duration-1000">consult</p>
+          <p class="info-item inline transition-colors duration-1000">secure</p>
         </div>
         <div class="text-xl text-sky-500 font-semibold leading-8 self-end">
           <p class="mb-4 "><a href="#">words</a></p>

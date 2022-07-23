@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   animations.headingAnimation.animateHeading();
   animations.headingAnimation.animateCursor();
   // animations.headingAnimation.textSlide();
-  animations.headingAnimation.fadeOutOnScorll();
+  // animations.headingAnimation.fadeOutOnScorll();
   heroHoverPreview.heroHoverPreview.infoHover();
 });

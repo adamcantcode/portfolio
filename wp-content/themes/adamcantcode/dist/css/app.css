@@ -594,6 +594,9 @@ video {
 .inline-block {
   display: inline-block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -632,6 +635,9 @@ video {
 }
 .flex-col {
   flex-direction: column;
+}
+.items-start {
+  align-items: flex-start;
 }
 .justify-between {
   justify-content: space-between;
@@ -723,8 +729,8 @@ video {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
-.opacity-75 {
-  opacity: 0.75;
+.mix-blend-difference {
+  mix-blend-mode: difference;
 }
 .shadow-\[0_4px_40px_rgba\(0\2c 0\2c 0\2c 0\.25\)\] {
   --tw-shadow: 0 4px 40px rgba(0,0,0,0.25);

@@ -1,16 +1,31 @@
 function HeroHoverPreview() {
   this.infoHover = () => {
     var infoItem = document.querySelectorAll('.info-item');
+    const cursor = document.querySelector('.cursor');
+
     infoItem.forEach((item) => {
       item.addEventListener('mouseover', (e) => {
-        if (e.target.innerText === 'consult') {
-          this.darkMode();
-        }
+        // if (e.target.innerText === 'consult') {
+        this.darkMode();
+        console.log(e);
+        gsap.to('.cursor', {
+          width: e.target.offsetWidth * 1.25 ,
+          height: e.target.offsetHeight,
+          left: -e.target.offsetWidth / 2,
+          ease: 'power4.out',
+        });
+        // }
       });
       item.addEventListener('mouseout', (e) => {
-        if (e.target.innerText === 'consult') {
-          this.lightMode();
-        }
+        // if (e.target.innerText === 'consult') {
+        this.lightMode();
+        gsap.to('.cursor', {
+          width: 16,
+          height: 16,
+          left: -16,
+          ease: 'power4.out',
+        });
+        // }
       });
     });
   };
