@@ -7,9 +7,9 @@ function HeroHoverPreview() {
       item.addEventListener('mouseover', (e) => {
         // if (e.target.innerText === 'consult') {
         this.darkMode();
-        console.log(e);
+        // this.slideOut(e);
         gsap.to('.cursor', {
-          width: e.target.offsetWidth * 1.25 ,
+          width: e.target.offsetWidth * 1.25,
           height: e.target.offsetHeight,
           left: -e.target.offsetWidth / 2,
           ease: 'power4.out',
@@ -19,6 +19,7 @@ function HeroHoverPreview() {
       item.addEventListener('mouseout', (e) => {
         // if (e.target.innerText === 'consult') {
         this.lightMode();
+
         gsap.to('.cursor', {
           width: 16,
           height: 16,
@@ -59,6 +60,17 @@ function HeroHoverPreview() {
     resume.classList.remove('border-white');
     resume.classList.add('border-neutral-800');
   };
+  // this.slideOut = (e) => {
+  //   const item = e;
+  //   console.log(e);
+  //   gsap.to(e.target, {
+  //     opacity: 0,
+  //     repeat: 0,
+  //     translateX: 10,
+  //     duration: .500,
+  //     repeat: -1
+  //   })
+  // }
 }
 
 const heroHoverPreview = new HeroHoverPreview();
