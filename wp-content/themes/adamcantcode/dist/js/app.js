@@ -181,7 +181,7 @@ function LoadIn() {
     console.log('generate');
     const container = document.querySelector('#loadIn');
     const initialElement = document.querySelector('#loadIn .box');
-    for (let i = 2; i < 15; i++) {
+    for (let i = 2; i < 10; i++) {
       const clone = initialElement.cloneNode(true);
       container.append(clone);
       let heightWidth = i * 20 + 100;
